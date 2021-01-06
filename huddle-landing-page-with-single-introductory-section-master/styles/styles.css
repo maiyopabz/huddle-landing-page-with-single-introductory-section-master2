@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
@@ -14,27 +15,16 @@
 body {
     background-color: var(--violet);
     background-image: url(../images/bg-desktop.svg);
-    background-repeat: space;
-  
-    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vh;
     font-family:  'sans-serif';
     font-size: 1.2em;
     
-}
-
-h1 {
-    font-family: 'Poppins';
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.2;
-}
-
-p {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
     
 }
+
+
 
 .container {
     display: flex;
@@ -54,6 +44,30 @@ p {
     padding: 0 10px;
 }
 
+.container >div:last-child {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+}
+
+p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.8;
+    
+}
+
+
+
 .btn {
     background-color: #fff;
     border: 0;
@@ -64,9 +78,55 @@ p {
     box-shadow: 0 6px rgba(0, 0, 0, 0.3);
 }
 
+
 .img1 {
     padding-bottom: 100px;
+
+}
+
+/*This is how you make social links with border circle*/
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10;
+    list-style-type: none;
+    
+    
+}
+
+.social-links a {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    text-decoration: none;
+    height: 60px;
+    width: 60px;
+    padding-top: 20px;
+    margin-left: 20px;
 }
 
 
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        
+    }
+
+    .container > div:first-child{
+        flex: 1;
+        margin-right: 0;
+    }
+
+    .container > div:last-child {
+        flex: 1;
+        margin-left: 0;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
 
